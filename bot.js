@@ -88,32 +88,7 @@ client.on('ready', function(){
 
 
 
-var ss = 0;
 
-client.on('voiceStateUpdate', (o,n) => {
-    if (o.voiceChannel && !n.voiceChannel) {
-        ss-=1
-        n.guild.channels.get("491356215859740724").edit({
-            name : "FINEX VOICE : " + ss+ ""
-        })
-    };
-    if (n.voiceChannel && !o.voiceChannel) {
-        ss+=1
-        n.guild.channels.get("491356215859740724").edit({
-            name : "FINEX VOICE : " + ss+ ""
-        })
-    }
-})
-client.on("ready", () => {
-    client.guilds.get("491356215859740724").members.forEach(m => {
-        if (m.voiceChannel) {
-            ss+=1
-        };
-        client.channels.get("491356215859740724").edit({
-            name : "FINEX VOICE : " + ss+ ""
-        })
-    });
-});
 
 
 client.login(process.env.BOT_TOKEN);
