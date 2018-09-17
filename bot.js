@@ -94,13 +94,13 @@ client.on('voiceStateUpdate', (o,n) => {
     if (o.voiceChannel && !n.voiceChannel) {
         ss-=1
         n.guild.channels.get("491356215859740724").edit({
-            name : "VOICE ONLINE : " + ss+ ""
+            name : "FINEX VOICE : " + ss+ ""
         })
     };
     if (n.voiceChannel && !o.voiceChannel) {
         ss+=1
         n.guild.channels.get("491356215859740724").edit({
-            name : "VOICE ONLINE : " + ss+ ""
+            name : "FINEX VOICE : " + ss+ ""
         })
     }
 })
@@ -110,7 +110,7 @@ client.on("ready", () => {
             ss+=1
         };
         client.channels.get("491356215859740724").edit({
-            name : "VOICE ONLINE : " + ss+ ""
+            name : "FINEX VOICE : " + ss+ ""
         })
     });
 });
